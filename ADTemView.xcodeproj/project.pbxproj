@@ -21,6 +21,7 @@
 		76D5ED771EC9A8930077D20C /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED761EC9A8930077D20C /* Enum.swift */; };
 		76D5ED791EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED781EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift */; };
 		76D5ED7B1EC9BDF70077D20C /* CALayer+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED7A1EC9BDF70077D20C /* CALayer+Additions.swift */; };
+		76D5ED7F1EC9C7F20077D20C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED7E1EC9C7F20077D20C /* HomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		76D5ED761EC9A8930077D20C /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		76D5ED781EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageSelectBLETableViewController.swift; sourceTree = "<group>"; };
 		76D5ED7A1EC9BDF70077D20C /* CALayer+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Additions.swift"; sourceTree = "<group>"; };
+		76D5ED7E1EC9C7F20077D20C /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				76D5ED6F1EC99CEF0077D20C /* StartPageViewController */,
+				76D5ED7D1EC9C7BC0077D20C /* HomePageViewController */,
 				76D5ED6D1EC99C100077D20C /* ADBaseViewController.swift */,
 			);
 			path = Controllers;
@@ -208,6 +211,14 @@
 				76D5ED781EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift */,
 			);
 			path = StartPageViewController;
+			sourceTree = "<group>";
+		};
+		76D5ED7D1EC9C7BC0077D20C /* HomePageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76D5ED7E1EC9C7F20077D20C /* HomePageViewController.swift */,
+			);
+			path = HomePageViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +371,7 @@
 				76D5ED771EC9A8930077D20C /* Enum.swift in Sources */,
 				76D5ED341EC9945B0077D20C /* AppDelegate.swift in Sources */,
 				76D5ED7B1EC9BDF70077D20C /* CALayer+Additions.swift in Sources */,
+				76D5ED7F1EC9C7F20077D20C /* HomePageViewController.swift in Sources */,
 				76D5ED731EC9A00B0077D20C /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

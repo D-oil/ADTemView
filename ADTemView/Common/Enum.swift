@@ -23,6 +23,8 @@ class Enum: NSObject {
         case ADStartPageSelectBLETableViewCell = "ADStartPageSelectBLETableViewCell"
     }
     
-    
+    enum StoryboardSegue : String {
+        case ADPushToHomePageSegue = "ADPushToHomePageSegue"
+    }
     
 }

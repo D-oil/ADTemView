@@ -46,7 +46,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jum-ng-zah">
-                                <rect key="frame" x="132.5" y="441.5" width="110" height="110"/>
+                                <rect key="frame" x="132.5" y="441" width="110" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDy-HE-Qon">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
@@ -190,7 +190,7 @@ Cg
                     <connections>
                         <outlet property="selectBLETableView" destination="rZ5-ak-jM5" id="Mlw-IS-LqV"/>
                         <outlet property="selectBLETableViewConnectView" destination="3dq-Vl-TsR" id="b34-U8-Fc5"/>
-                        <segue destination="UYF-5G-VCt" kind="show" id="qrB-9m-98d"/>
+                        <segue destination="UYF-5G-VCt" kind="show" identifier="ADPushToHomePageSegue" id="qrB-9m-98d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -242,10 +242,10 @@ Cg
             </objects>
             <point key="canvasLocation" x="861" y="-113"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Page View Controller-->
         <scene sceneID="Q8e-5I-H1H">
             <objects>
-                <viewController id="UYF-5G-VCt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomePageViewController" id="UYF-5G-VCt" customClass="HomePageViewController" customModule="ADTemView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jnT-H0-dTY"/>
                         <viewControllerLayoutGuide type="bottom" id="gh1-6Y-jXc"/>
@@ -254,25 +254,56 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="HomePage_Background" translatesAutoresizingMaskIntoConstraints="NO" id="qNj-x8-3z4">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="HomePage_Background&amp;ValueDisplayBoard" translatesAutoresizingMaskIntoConstraints="NO" id="C32-Md-MhB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwJ-q5-QnN">
-                                <rect key="frame" x="32" y="51" width="34" height="34"/>
+                                <rect key="frame" x="32" y="45" width="28" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="34" id="Iqr-Yy-07c"/>
-                                    <constraint firstAttribute="height" constant="34" id="bGo-jG-cfI"/>
+                                    <constraint firstAttribute="width" constant="28" id="Iqr-Yy-07c"/>
+                                    <constraint firstAttribute="height" constant="28" id="bGo-jG-cfI"/>
                                 </constraints>
                                 <state key="normal" image="HomePage_SetButton"/>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="HomePage_ProbeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cqt-uX-x8i">
+                                <rect key="frame" x="162.5" y="34" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="FGt-LN-Bgz"/>
+                                    <constraint firstAttribute="height" constant="50" id="Qaq-Ak-7I3"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="HomePage_WirelessButton" translatesAutoresizingMaskIntoConstraints="NO" id="IVW-zS-1Wh">
+                                <rect key="frame" x="299" y="41" width="60" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Q03-Hh-TLo"/>
+                                    <constraint firstAttribute="width" constant="60" id="pre-dU-nXe"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dby-m1-dwf">
+                                <rect key="frame" x="156" y="612" width="63" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="SRR-Oq-1TD"/>
+                                    <constraint firstAttribute="width" constant="63" id="gHI-KZ-7BN"/>
+                                </constraints>
+                                <state key="normal" image="HomePage_ChartButton"/>
+                                <connections>
+                                    <segue destination="1jK-F5-zCE" kind="show" id="cAV-bP-bSD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qNj-x8-3z4" firstAttribute="leading" secondItem="QbN-m8-kZW" secondAttribute="leading" id="HtO-F0-JXg"/>
-                            <constraint firstItem="qNj-x8-3z4" firstAttribute="top" secondItem="QbN-m8-kZW" secondAttribute="top" id="MxF-Yl-Chv"/>
-                            <constraint firstAttribute="trailing" secondItem="qNj-x8-3z4" secondAttribute="trailing" id="Shv-Vq-AE7"/>
-                            <constraint firstAttribute="bottom" secondItem="qNj-x8-3z4" secondAttribute="bottom" id="pHn-Yw-Pih"/>
-                            <constraint firstItem="WwJ-q5-QnN" firstAttribute="top" secondItem="jnT-H0-dTY" secondAttribute="bottom" constant="51" id="vzD-ua-EuZ"/>
+                            <constraint firstItem="cqt-uX-x8i" firstAttribute="centerY" secondItem="WwJ-q5-QnN" secondAttribute="centerY" id="4Yt-Fv-wFV"/>
+                            <constraint firstItem="gh1-6Y-jXc" firstAttribute="top" secondItem="dby-m1-dwf" secondAttribute="bottom" constant="20" id="5fx-Eo-DR2"/>
+                            <constraint firstAttribute="trailing" secondItem="C32-Md-MhB" secondAttribute="trailing" id="6ta-Yw-0gY"/>
+                            <constraint firstItem="dby-m1-dwf" firstAttribute="centerX" secondItem="QbN-m8-kZW" secondAttribute="centerX" id="BXG-4D-IJY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IVW-zS-1Wh" secondAttribute="trailing" id="NQD-GS-OPe"/>
+                            <constraint firstItem="C32-Md-MhB" firstAttribute="top" secondItem="QbN-m8-kZW" secondAttribute="top" id="Xpv-cc-hgT"/>
+                            <constraint firstItem="C32-Md-MhB" firstAttribute="leading" secondItem="QbN-m8-kZW" secondAttribute="leading" id="cKA-5a-mjB"/>
+                            <constraint firstAttribute="bottom" secondItem="C32-Md-MhB" secondAttribute="bottom" id="cfv-jq-vcw"/>
+                            <constraint firstItem="IVW-zS-1Wh" firstAttribute="centerY" secondItem="WwJ-q5-QnN" secondAttribute="centerY" id="eYK-js-FvJ"/>
+                            <constraint firstItem="cqt-uX-x8i" firstAttribute="centerX" secondItem="QbN-m8-kZW" secondAttribute="centerX" id="pQe-Gm-8L9"/>
+                            <constraint firstItem="WwJ-q5-QnN" firstAttribute="top" secondItem="jnT-H0-dTY" secondAttribute="bottom" constant="45" id="vzD-ua-EuZ"/>
                             <constraint firstItem="WwJ-q5-QnN" firstAttribute="leading" secondItem="QbN-m8-kZW" secondAttribute="leadingMargin" constant="16" id="zz8-m6-24B"/>
                         </constraints>
                     </view>
@@ -280,6 +311,47 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eht-4s-Ydk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1624.8" y="-559.07046476761627"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sRQ-ZF-HgM">
+            <objects>
+                <viewController id="1jK-F5-zCE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jok-P8-aeI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qni-aN-6pw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r7F-Fm-Kap">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SelectPage_Background" translatesAutoresizingMaskIntoConstraints="NO" id="usk-td-l8U">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="SelectPage_Day" translatesAutoresizingMaskIntoConstraints="NO" id="HxZ-2R-Bc6">
+                                <rect key="frame" x="75" y="92" width="55" height="191"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="SelectPage_TableButton" translatesAutoresizingMaskIntoConstraints="NO" id="DDJ-CT-X3T">
+                                <rect key="frame" x="10" y="136" width="49" height="79"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="SelectPage_ProbeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lLx-lm-CNZ">
+                                <rect key="frame" x="79" y="20" width="47" height="33"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="usk-td-l8U" firstAttribute="leading" secondItem="r7F-Fm-Kap" secondAttribute="leading" id="6u8-B2-uFh"/>
+                            <constraint firstItem="usk-td-l8U" firstAttribute="top" secondItem="r7F-Fm-Kap" secondAttribute="top" id="fRV-5y-tIX"/>
+                            <constraint firstAttribute="trailing" secondItem="usk-td-l8U" secondAttribute="trailing" id="iCc-TT-XYi"/>
+                            <constraint firstAttribute="bottom" secondItem="usk-td-l8U" secondAttribute="bottom" id="xE0-zk-AiQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMI-VW-ACh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2292.5037481259374" y="-559.20000000000005"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I55-hP-PcS">
@@ -301,8 +373,15 @@ Cg
         </scene>
     </scenes>
     <resources>
-        <image name="HomePage_Background" width="1080" height="1920"/>
+        <image name="HomePage_Background&amp;ValueDisplayBoard" width="1080" height="1920"/>
+        <image name="HomePage_ChartButton" width="136" height="89"/>
+        <image name="HomePage_ProbeIcon" width="126" height="126"/>
         <image name="HomePage_SetButton" width="68" height="68"/>
+        <image name="HomePage_WirelessButton" width="95" height="82"/>
+        <image name="SelectPage_Background" width="1920" height="1080"/>
+        <image name="SelectPage_Day" width="144" height="462"/>
+        <image name="SelectPage_ProbeIcon" width="102" height="102"/>
+        <image name="SelectPage_TableButton" width="91" height="112"/>
         <image name="StartPage_AppTitle" width="740" height="226"/>
         <image name="StartPage_Background" width="1080" height="1920"/>
         <image name="StartPage_Button" width="338" height="338"/>
