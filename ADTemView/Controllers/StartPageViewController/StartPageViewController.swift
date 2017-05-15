@@ -29,7 +29,7 @@ class StartPageViewController: ADBaseViewController {
     
     @IBAction func StartButtonAction(_ sender: UIButton) {
         
-        self.navigationController?.performSegue(withIdentifier: Enum.StoryboardSegue.ADPushToHomePageSegue.rawValue, sender: nil)
+//        self.navigationController?.performSegue(withIdentifier: Enum.StoryboardSegue.ADPushToHomePageSegue.rawValue, sender: nil)
         
         if startPageSelectBLETableViewController == nil {
             startPageSelectBLETableViewController = Enum.STORYBOARDS.MAIN_STORYBOARD.instantiateViewController(withIdentifier: Enum.StoryboardIdentifier.ADStartPageSelectBLETableViewController.rawValue) as? StartPageSelectBLETableViewController

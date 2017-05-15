@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class Enum: NSObject {
+    
     struct STORYBOARDS {
         static let MAIN_STORYBOARD            =   UIStoryboard(name: "Main", bundle: nil)
     }
@@ -19,12 +20,12 @@ class Enum: NSObject {
 
     }
     
-    enum CellIdentifier : String {
-        case ADStartPageSelectBLETableViewCell = "ADStartPageSelectBLETableViewCell"
+    enum CellIdentifier       : String {
+        case ADStartPageSelectBLETableViewCell       = "ADStartPageSelectBLETableViewCell"
     }
     
-    enum StoryboardSegue : String {
-        case ADPushToHomePageSegue = "ADPushToHomePageSegue"
+    enum StoryboardSegue      : String {
+        case ADPushToHomePageSegue                   = "ADPushToHomePageSegue"
     }
     
 }
