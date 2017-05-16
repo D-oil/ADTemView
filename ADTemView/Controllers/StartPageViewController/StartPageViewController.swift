@@ -16,6 +16,8 @@ class StartPageViewController: ADBaseViewController {
     var startPageSelectBLETableViewController : StartPageSelectBLETableViewController?
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,13 +31,14 @@ class StartPageViewController: ADBaseViewController {
     
     @IBAction func StartButtonAction(_ sender: UIButton) {
         
-//        self.navigationController?.performSegue(withIdentifier: Enum.StoryboardSegue.ADPushToHomePageSegue.rawValue, sender: nil)
+
         
         if startPageSelectBLETableViewController == nil {
             startPageSelectBLETableViewController = Enum.STORYBOARDS.MAIN_STORYBOARD.instantiateViewController(withIdentifier: Enum.StoryboardIdentifier.ADStartPageSelectBLETableViewController.rawValue) as? StartPageSelectBLETableViewController
             
             self.addChildViewController(startPageSelectBLETableViewController!)
             selectBLETableView.addSubview(startPageSelectBLETableViewController!.view)
+            startPageSelectBLETableViewController?.view.frame.size = selectBLETableView.frame.size
             startPageSelectBLETableViewController!.didMove(toParentViewController: self)
         }
         

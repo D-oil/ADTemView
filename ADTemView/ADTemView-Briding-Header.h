@@ -9,6 +9,9 @@
 #ifndef ADTemView_Briding_Header_h
 #define ADTemView_Briding_Header_h
 
-#import "MBProgressHUD.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+//#improt "MBProgressHUD.h"
+
 
 #endif /* ADTemView_Briding_Header_h */

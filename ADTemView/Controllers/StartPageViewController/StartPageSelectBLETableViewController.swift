@@ -10,12 +10,7 @@ import UIKit
 
 class StartPageSelectBLETableViewController: UITableViewController {
 
-    override func loadView() {
-        super.loadView()
-        
-        view.autoresizingMask =
-            UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleWidth.rawValue + UIViewAutoresizing.flexibleHeight.rawValue)
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +49,7 @@ class StartPageSelectBLETableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        self.navigationController?.performSegue(withIdentifier: Enum.StoryboardSegue.ADPushToHomePageSegue.rawValue, sender: nil)
         
     }
     

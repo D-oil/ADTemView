@@ -17,11 +17,14 @@ class Enum: NSObject {
     
     enum StoryboardIdentifier : String {
         case ADStartPageSelectBLETableViewController = "ADStartPageSelectBLETableViewController"
+        case ADEditProbeInfoTableViewController           = "ADEditProbeInfoTableViewController"
+        case ADBLETableViewController           = "ADBLETableViewController"
 
     }
     
     enum CellIdentifier       : String {
         case ADStartPageSelectBLETableViewCell       = "ADStartPageSelectBLETableViewCell"
+        case ADHomePageBLETableViewCell              = "ADHomePageBLETableViewCell"
     }
     
     enum StoryboardSegue      : String {

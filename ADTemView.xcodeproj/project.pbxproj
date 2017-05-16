@@ -28,6 +28,8 @@
 		92CFEA691ECA88D3004673DB /* SettingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA681ECA88D3004673DB /* SettingPageViewController.swift */; };
 		92CFEA6B1ECA88E3004673DB /* TablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA6A1ECA88E3004673DB /* TablePageViewController.swift */; };
 		92CFEA6E1ECA8A1C004673DB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA6D1ECA8A1C004673DB /* NavigationController.swift */; };
+		92CFEA781ECB10F6004673DB /* EditProbeInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA771ECB10F6004673DB /* EditProbeInfoTableViewController.swift */; };
+		92CFEA7A1ECB197C004673DB /* BLETableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA791ECB197C004673DB /* BLETableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		92CFEA6A1ECA88E3004673DB /* TablePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TablePageViewController.swift; sourceTree = "<group>"; };
 		92CFEA6D1ECA8A1C004673DB /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		92CFEA6F1ECA93F5004673DB /* ADTemView-Briding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ADTemView-Briding-Header.h"; sourceTree = "<group>"; };
+		92CFEA771ECB10F6004673DB /* EditProbeInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProbeInfoTableViewController.swift; sourceTree = "<group>"; };
+		92CFEA791ECB197C004673DB /* BLETableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLETableViewController.swift; sourceTree = "<group>"; };
 		982569E366BBDD5048679D07 /* Pods_ADTemView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADTemView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B152BE1094E9F53D916A25AE /* Pods_ADTemViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADTemViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -255,6 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				76D5ED7E1EC9C7F20077D20C /* HomePageViewController.swift */,
+				92CFEA771ECB10F6004673DB /* EditProbeInfoTableViewController.swift */,
+				92CFEA791ECB197C004673DB /* BLETableViewController.swift */,
 			);
 			path = HomePageViewController;
 			sourceTree = "<group>";
@@ -588,11 +594,13 @@
 				76D5ED751EC9A02E0077D20C /* ADTemView.swift in Sources */,
 				76D5ED711EC99D2A0077D20C /* StartPageViewController.swift in Sources */,
 				76D5ED6E1EC99C100077D20C /* ADBaseViewController.swift in Sources */,
+				92CFEA7A1ECB197C004673DB /* BLETableViewController.swift in Sources */,
 				92CFEA691ECA88D3004673DB /* SettingPageViewController.swift in Sources */,
 				76D5ED791EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift in Sources */,
 				76D5ED3C1EC9945D0077D20C /* ADTemView.xcdatamodeld in Sources */,
 				76D5ED771EC9A8930077D20C /* Enum.swift in Sources */,
 				76D5ED341EC9945B0077D20C /* AppDelegate.swift in Sources */,
+				92CFEA781ECB10F6004673DB /* EditProbeInfoTableViewController.swift in Sources */,
 				92CFEA6E1ECA8A1C004673DB /* NavigationController.swift in Sources */,
 				92CFEA6B1ECA88E3004673DB /* TablePageViewController.swift in Sources */,
 				76D5ED7B1EC9BDF70077D20C /* CALayer+Additions.swift in Sources */,
