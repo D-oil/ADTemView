@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		215DC009C8799211B009D2CF /* Pods_ADTemViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347E61E60F92A6A4590AFC31 /* Pods_ADTemViewUITests.framework */; };
+		63990A39B69816BBEE6C7B76 /* Pods_ADTemViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B152BE1094E9F53D916A25AE /* Pods_ADTemViewTests.framework */; };
 		76D5ED341EC9945B0077D20C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED331EC9945B0077D20C /* AppDelegate.swift */; };
 		76D5ED391EC9945C0077D20C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76D5ED371EC9945C0077D20C /* Main.storyboard */; };
 		76D5ED3C1EC9945D0077D20C /* ADTemView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED3A1EC9945D0077D20C /* ADTemView.xcdatamodeld */; };
@@ -22,6 +24,10 @@
 		76D5ED791EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED781EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift */; };
 		76D5ED7B1EC9BDF70077D20C /* CALayer+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED7A1EC9BDF70077D20C /* CALayer+Additions.swift */; };
 		76D5ED7F1EC9C7F20077D20C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED7E1EC9C7F20077D20C /* HomePageViewController.swift */; };
+		803D94382BA79E94B5F6A7A8 /* Pods_ADTemView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982569E366BBDD5048679D07 /* Pods_ADTemView.framework */; };
+		92CFEA691ECA88D3004673DB /* SettingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA681ECA88D3004673DB /* SettingPageViewController.swift */; };
+		92CFEA6B1ECA88E3004673DB /* TablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA6A1ECA88E3004673DB /* TablePageViewController.swift */; };
+		92CFEA6E1ECA8A1C004673DB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA6D1ECA8A1C004673DB /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FA2754782DFD9B00F9FEC75 /* Pods-ADTemViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADTemViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADTemViewTests/Pods-ADTemViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		23D5E29C62ED09C7B55FAA7D /* Pods-ADTemView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADTemView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADTemView/Pods-ADTemView.debug.xcconfig"; sourceTree = "<group>"; };
+		294DE1422912E6144E8CAACC /* Pods-ADTemViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADTemViewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADTemViewUITests/Pods-ADTemViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		347E61E60F92A6A4590AFC31 /* Pods_ADTemViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADTemViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D5ED301EC9945A0077D20C /* ADTemView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADTemView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D5ED331EC9945B0077D20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76D5ED381EC9945C0077D20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +73,15 @@
 		76D5ED781EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageSelectBLETableViewController.swift; sourceTree = "<group>"; };
 		76D5ED7A1EC9BDF70077D20C /* CALayer+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Additions.swift"; sourceTree = "<group>"; };
 		76D5ED7E1EC9C7F20077D20C /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		7CBE94BC31B88B0E73DFD636 /* Pods-ADTemViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADTemViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADTemViewUITests/Pods-ADTemViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8041DD52C9708B3D7EACDF0A /* Pods-ADTemViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADTemViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADTemViewTests/Pods-ADTemViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		9060848F9D75705887C1AA65 /* Pods-ADTemView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADTemView.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADTemView/Pods-ADTemView.release.xcconfig"; sourceTree = "<group>"; };
+		92CFEA681ECA88D3004673DB /* SettingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPageViewController.swift; sourceTree = "<group>"; };
+		92CFEA6A1ECA88E3004673DB /* TablePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TablePageViewController.swift; sourceTree = "<group>"; };
+		92CFEA6D1ECA8A1C004673DB /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		92CFEA6F1ECA93F5004673DB /* ADTemView-Briding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ADTemView-Briding-Header.h"; sourceTree = "<group>"; };
+		982569E366BBDD5048679D07 /* Pods_ADTemView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADTemView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B152BE1094E9F53D916A25AE /* Pods_ADTemViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADTemViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				803D94382BA79E94B5F6A7A8 /* Pods_ADTemView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63990A39B69816BBEE6C7B76 /* Pods_ADTemViewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,12 +105,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				215DC009C8799211B009D2CF /* Pods_ADTemViewUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CEF5A529BCA4347052C8345 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				982569E366BBDD5048679D07 /* Pods_ADTemView.framework */,
+				B152BE1094E9F53D916A25AE /* Pods_ADTemViewTests.framework */,
+				347E61E60F92A6A4590AFC31 /* Pods_ADTemViewUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		76D5ED271EC9945A0077D20C = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +129,8 @@
 				76D5ED4A1EC9945E0077D20C /* ADTemViewTests */,
 				76D5ED551EC9945E0077D20C /* ADTemViewUITests */,
 				76D5ED311EC9945A0077D20C /* Products */,
+				ED08992B9FB1BF844F391627 /* Pods */,
+				6CEF5A529BCA4347052C8345 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +157,7 @@
 				76D5ED681EC995970077D20C /* Model */,
 				76D5ED371EC9945C0077D20C /* Main.storyboard */,
 				76D5ED3F1EC9945D0077D20C /* LaunchScreen.storyboard */,
+				92CFEA6F1ECA93F5004673DB /* ADTemView-Briding-Header.h */,
 				76D5ED3D1EC9945D0077D20C /* Assets.xcassets */,
 				76D5ED421EC9945D0077D20C /* Info.plist */,
 				76D5ED3A1EC9945D0077D20C /* ADTemView.xcdatamodeld */,
@@ -176,8 +211,11 @@
 		76D5ED671EC995970077D20C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				92CFEA6C1ECA89F6004673DB /* NavigationController */,
 				76D5ED6F1EC99CEF0077D20C /* StartPageViewController */,
 				76D5ED7D1EC9C7BC0077D20C /* HomePageViewController */,
+				92CFEA661ECA88B2004673DB /* SettingPageViewController */,
+				92CFEA671ECA88BD004673DB /* TablePageViewController */,
 				76D5ED6D1EC99C100077D20C /* ADBaseViewController.swift */,
 			);
 			path = Controllers;
@@ -221,6 +259,43 @@
 			path = HomePageViewController;
 			sourceTree = "<group>";
 		};
+		92CFEA661ECA88B2004673DB /* SettingPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92CFEA681ECA88D3004673DB /* SettingPageViewController.swift */,
+			);
+			path = SettingPageViewController;
+			sourceTree = "<group>";
+		};
+		92CFEA671ECA88BD004673DB /* TablePageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92CFEA6A1ECA88E3004673DB /* TablePageViewController.swift */,
+			);
+			path = TablePageViewController;
+			sourceTree = "<group>";
+		};
+		92CFEA6C1ECA89F6004673DB /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				92CFEA6D1ECA8A1C004673DB /* NavigationController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		ED08992B9FB1BF844F391627 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23D5E29C62ED09C7B55FAA7D /* Pods-ADTemView.debug.xcconfig */,
+				9060848F9D75705887C1AA65 /* Pods-ADTemView.release.xcconfig */,
+				0FA2754782DFD9B00F9FEC75 /* Pods-ADTemViewTests.debug.xcconfig */,
+				8041DD52C9708B3D7EACDF0A /* Pods-ADTemViewTests.release.xcconfig */,
+				294DE1422912E6144E8CAACC /* Pods-ADTemViewUITests.debug.xcconfig */,
+				7CBE94BC31B88B0E73DFD636 /* Pods-ADTemViewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,9 +303,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76D5ED5B1EC9945E0077D20C /* Build configuration list for PBXNativeTarget "ADTemView" */;
 			buildPhases = (
+				CF2304AABA3D88D806C7CAAB /* [CP] Check Pods Manifest.lock */,
 				76D5ED2C1EC9945A0077D20C /* Sources */,
 				76D5ED2D1EC9945A0077D20C /* Frameworks */,
 				76D5ED2E1EC9945A0077D20C /* Resources */,
+				DCF53069DC39496DA38FFF59 /* [CP] Embed Pods Frameworks */,
+				7F211DD5995D2A61F4653B50 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,9 +323,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76D5ED5E1EC9945E0077D20C /* Build configuration list for PBXNativeTarget "ADTemViewTests" */;
 			buildPhases = (
+				5CA8D2AFAC9A8596BA204BF7 /* [CP] Check Pods Manifest.lock */,
 				76D5ED431EC9945E0077D20C /* Sources */,
 				76D5ED441EC9945E0077D20C /* Frameworks */,
 				76D5ED451EC9945E0077D20C /* Resources */,
+				319F6F081D4C3E9EEA982EB5 /* [CP] Embed Pods Frameworks */,
+				F4F7EA6937D06F61B8E4FAFC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,9 +344,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76D5ED611EC9945E0077D20C /* Build configuration list for PBXNativeTarget "ADTemViewUITests" */;
 			buildPhases = (
+				39FA74558B6A50D464C961DF /* [CP] Check Pods Manifest.lock */,
 				76D5ED4E1EC9945E0077D20C /* Sources */,
 				76D5ED4F1EC9945E0077D20C /* Frameworks */,
 				76D5ED501EC9945E0077D20C /* Resources */,
+				3953F4907527870CBDDAECC3 /* [CP] Embed Pods Frameworks */,
+				8BD56E4D7E20AC8746A66434 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,6 +442,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		319F6F081D4C3E9EEA982EB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADTemViewTests/Pods-ADTemViewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3953F4907527870CBDDAECC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADTemViewUITests/Pods-ADTemViewUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39FA74558B6A50D464C961DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5CA8D2AFAC9A8596BA204BF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7F211DD5995D2A61F4653B50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADTemView/Pods-ADTemView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BD56E4D7E20AC8746A66434 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADTemViewUITests/Pods-ADTemViewUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF2304AABA3D88D806C7CAAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DCF53069DC39496DA38FFF59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADTemView/Pods-ADTemView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4F7EA6937D06F61B8E4FAFC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADTemViewTests/Pods-ADTemViewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		76D5ED2C1EC9945A0077D20C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -366,10 +588,13 @@
 				76D5ED751EC9A02E0077D20C /* ADTemView.swift in Sources */,
 				76D5ED711EC99D2A0077D20C /* StartPageViewController.swift in Sources */,
 				76D5ED6E1EC99C100077D20C /* ADBaseViewController.swift in Sources */,
+				92CFEA691ECA88D3004673DB /* SettingPageViewController.swift in Sources */,
 				76D5ED791EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift in Sources */,
 				76D5ED3C1EC9945D0077D20C /* ADTemView.xcdatamodeld in Sources */,
 				76D5ED771EC9A8930077D20C /* Enum.swift in Sources */,
 				76D5ED341EC9945B0077D20C /* AppDelegate.swift in Sources */,
+				92CFEA6E1ECA8A1C004673DB /* NavigationController.swift in Sources */,
+				92CFEA6B1ECA88E3004673DB /* TablePageViewController.swift in Sources */,
 				76D5ED7B1EC9BDF70077D20C /* CALayer+Additions.swift in Sources */,
 				76D5ED7F1EC9C7F20077D20C /* HomePageViewController.swift in Sources */,
 				76D5ED731EC9A00B0077D20C /* Constant.swift in Sources */,
@@ -522,6 +747,7 @@
 		};
 		76D5ED5C1EC9945E0077D20C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23D5E29C62ED09C7B55FAA7D /* Pods-ADTemView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4D49NLC4WA;
@@ -530,12 +756,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skylight.dad.ADTemView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ADTemView/ADTemView-Briding-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		76D5ED5D1EC9945E0077D20C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9060848F9D75705887C1AA65 /* Pods-ADTemView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4D49NLC4WA;
@@ -544,12 +772,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skylight.dad.ADTemView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ADTemView/ADTemView-Briding-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		76D5ED5F1EC9945E0077D20C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FA2754782DFD9B00F9FEC75 /* Pods-ADTemViewTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -565,6 +795,7 @@
 		};
 		76D5ED601EC9945E0077D20C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8041DD52C9708B3D7EACDF0A /* Pods-ADTemViewTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -580,6 +811,7 @@
 		};
 		76D5ED621EC9945E0077D20C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294DE1422912E6144E8CAACC /* Pods-ADTemViewUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4D49NLC4WA;
@@ -594,6 +826,7 @@
 		};
 		76D5ED631EC9945E0077D20C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CBE94BC31B88B0E73DFD636 /* Pods-ADTemViewUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4D49NLC4WA;
@@ -625,6 +858,7 @@
 				76D5ED5D1EC9945E0077D20C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76D5ED5E1EC9945E0077D20C /* Build configuration list for PBXNativeTarget "ADTemViewTests" */ = {
 			isa = XCConfigurationList;
@@ -633,6 +867,7 @@
 				76D5ED601EC9945E0077D20C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76D5ED611EC9945E0077D20C /* Build configuration list for PBXNativeTarget "ADTemViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -641,6 +876,7 @@
 				76D5ED631EC9945E0077D20C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

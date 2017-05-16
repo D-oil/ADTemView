@@ -1,15 +1,25 @@
 //
-//  HomePageViewController.swift
+//  TablePageViewController.swift
 //  ADTemView
 //
-//  Created by andong on 2017/5/15.
+//  Created by 董安东 on 2017/5/16.
 //  Copyright © 2017年 AD.org. All rights reserved.
 //
 
 import UIKit
 
-class HomePageViewController: ADBaseViewController {
+class TablePageViewController: ADBaseViewController {
 
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return .landscapeRight
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,8 +31,9 @@ class HomePageViewController: ADBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func tableButtonAction() {
-        AppDelegate.deviceRotationTo(deviceOrientation: .landscapeRight)
+    @IBAction func backButtonAction() {
+        AppDelegate .deviceRotationTo(deviceOrientation: .portrait)
+        onCloseClicked()
     }
 
     /*

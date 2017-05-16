@@ -23,8 +23,13 @@ class ADBaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return .portrait
+        }
+    }
     
-    func onCloseClicked(sender: AnyObject) {
+    func onCloseClicked() {
         navigationController!.popViewController(animated: true)
     }
     

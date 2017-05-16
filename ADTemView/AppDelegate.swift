@@ -14,7 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    static func deviceRotationTo(deviceOrientation:UIDeviceOrientation) {
+        
+        let orientationUnknow = NSNumber.init(value: UIDeviceOrientation.unknown.rawValue)
+        UIDevice.current .setValue(orientationUnknow, forKey: "orientation")
+        let orientationTarget = NSNumber.init(value: deviceOrientation.rawValue)
+        UIDevice.current .setValue(orientationTarget, forKey: "orientation")
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
