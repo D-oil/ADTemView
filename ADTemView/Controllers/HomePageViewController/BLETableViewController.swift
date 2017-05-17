@@ -12,8 +12,8 @@ class BLETableViewController: ADBaseViewController,UITableViewDataSource,UITable
 {
 
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var messageBackgroundView: UIView!
+    @IBOutlet weak var messageLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -26,8 +26,6 @@ class BLETableViewController: ADBaseViewController,UITableViewDataSource,UITable
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -45,7 +43,28 @@ class BLETableViewController: ADBaseViewController,UITableViewDataSource,UITable
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        messageLabel.text = ""
+        messageViewDismiss(false)
+    }
 
+    func messageViewDismiss(_ isDismiss : Bool) {
+        if isDismiss {
+            messageBackgroundView.isHidden = true
+        } else {
+            messageBackgroundView.isHidden = false
+        }
+    }
+    
+    @IBAction func messsageViewCancelAction(_ sender: UIButton) {
+        messageViewDismiss(true)
+    }
+    
+    @IBAction func messageViewCheckAction(_ sender: UIButton) {
+        messageViewDismiss(true)
+    }
+    
     /*
     // MARK: - Navigation
 

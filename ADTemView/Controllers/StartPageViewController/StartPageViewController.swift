@@ -10,13 +10,9 @@ import UIKit
 
 class StartPageViewController: ADBaseViewController {
 
-
     @IBOutlet weak var selectBLETableViewConnectView: UIView!
     @IBOutlet weak var selectBLETableView: UIView!
     var startPageSelectBLETableViewController : StartPageSelectBLETableViewController?
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +26,7 @@ class StartPageViewController: ADBaseViewController {
     }
     
     @IBAction func StartButtonAction(_ sender: UIButton) {
-        
 
-        
         if startPageSelectBLETableViewController == nil {
             startPageSelectBLETableViewController = Enum.STORYBOARDS.MAIN_STORYBOARD.instantiateViewController(withIdentifier: Enum.StoryboardIdentifier.ADStartPageSelectBLETableViewController.rawValue) as? StartPageSelectBLETableViewController
             

@@ -243,7 +243,7 @@ Cg
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66O-du-rwp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="-979"/>
+            <point key="canvasLocation" x="814" y="-1023"/>
         </scene>
         <!--Setting Page View Controller-->
         <scene sceneID="LC1-88-l6d">
@@ -334,7 +334,7 @@ Cg
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGa-Zz-GMC">
-                                <rect key="frame" x="0.0" y="444.5" width="375" height="68.5"/>
+                                <rect key="frame" x="0.0" y="444.5" width="375" height="68"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -455,7 +455,7 @@ Cg
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g58-l9-Bxd" userLabel="Tem View">
                                 <rect key="frame" x="0.0" y="95" width="375" height="153"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6a-dr-bke">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="— —" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6a-dr-bke">
                                         <rect key="frame" x="60" y="29.5" width="193" height="93"/>
                                         <constraints>
                                             <constraint firstAttribute="width" priority="749" constant="216" id="Sjl-N0-PMM"/>
@@ -570,6 +570,12 @@ Cg
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xze-gg-PqX" userLabel="BLE Table View">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ln7-kW-DCo">
+                                        <rect key="frame" x="0.0" y="0.0" width="383" height="667"/>
+                                        <connections>
+                                            <action selector="BLEDismissButtonAction:" destination="UYF-5G-VCt" eventType="touchUpInside" id="JDk-yx-rZE"/>
+                                        </connections>
+                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prW-ud-zQz">
                                         <rect key="frame" x="49.5" y="206" width="284" height="255"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -594,8 +600,12 @@ Cg
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="ln7-kW-DCo" firstAttribute="top" secondItem="xze-gg-PqX" secondAttribute="top" id="77O-Ph-6J4"/>
+                                    <constraint firstItem="ln7-kW-DCo" firstAttribute="leading" secondItem="xze-gg-PqX" secondAttribute="leading" id="Dzn-bb-dmm"/>
                                     <constraint firstItem="prW-ud-zQz" firstAttribute="centerX" secondItem="xze-gg-PqX" secondAttribute="centerX" id="LZF-wU-QLY"/>
+                                    <constraint firstAttribute="trailing" secondItem="ln7-kW-DCo" secondAttribute="trailing" id="TKj-J6-WJY"/>
                                     <constraint firstItem="prW-ud-zQz" firstAttribute="width" secondItem="xze-gg-PqX" secondAttribute="width" multiplier="1:1.35" id="s6L-Do-kVy"/>
+                                    <constraint firstAttribute="bottom" secondItem="ln7-kW-DCo" secondAttribute="bottom" id="uXb-Uk-5bv"/>
                                     <constraint firstItem="prW-ud-zQz" firstAttribute="centerY" secondItem="xze-gg-PqX" secondAttribute="centerY" id="zuu-7Q-wTm"/>
                                 </constraints>
                             </view>
@@ -642,12 +652,11 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eht-4s-Ydk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628.985507246377" y="-559.23913043478262"/>
+            <point key="canvasLocation" x="1628" y="-559.97001499250382"/>
         </scene>
         <!--Edit Probe Info Table View Controller-->
         <scene sceneID="gn6-HW-huX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AAR-Ei-Svq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="ADEditProbeInfoTableViewController" id="kAF-jk-Wcc" customClass="EditProbeInfoTableViewController" customModule="ADTemView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" id="WIw-ly-I71">
                         <rect key="frame" x="0.0" y="0.0" width="306.66666666666663" height="276"/>
@@ -862,8 +871,9 @@ Cg
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="306.66666666666663" height="276"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AAR-Ei-Svq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1405" y="-1022"/>
+            <point key="canvasLocation" x="1342" y="-1023"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="GbI-TO-s7z">
@@ -886,7 +896,7 @@ Cg
                                 <color key="separatorColor" red="0.0" green="0.5568627451" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ADHomePageBLETableViewCell" id="4y5-FL-aoo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ADHomePageBLETableViewCell" id="4y5-FL-aoo">
                                         <rect key="frame" x="0.0" y="28" width="306.5" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4y5-FL-aoo" id="Cyz-pM-8d4">
@@ -923,7 +933,7 @@ Cg
                                     <outlet property="delegate" destination="5hb-hJ-9lV" id="3OG-Ta-5N8"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfZ-rn-kVf">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfZ-rn-kVf">
                                 <rect key="frame" x="0.0" y="0.0" width="307" height="276"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaX-y5-2tL">
@@ -953,6 +963,7 @@ Cg
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="disMissButtonAction:" destination="kAF-jk-Wcc" eventType="touchUpInside" id="y62-pq-dXz"/>
+                                                    <action selector="messsageViewCancelAction:" destination="5hb-hJ-9lV" eventType="touchUpInside" id="ust-6F-QHQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNX-Zv-fKY">
@@ -973,6 +984,7 @@ Cg
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="disMissButtonAction:" destination="kAF-jk-Wcc" eventType="touchUpInside" id="HfO-ZO-WOg"/>
+                                                    <action selector="messageViewCheckAction:" destination="5hb-hJ-9lV" eventType="touchUpInside" id="yQX-OX-Qf8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1024,6 +1036,7 @@ Cg
                     <size key="freeformSize" width="306.69999999999999" height="276"/>
                     <connections>
                         <outlet property="messageBackgroundView" destination="KfZ-rn-kVf" id="rmB-lU-lNn"/>
+                        <outlet property="messageLabel" destination="F0F-tJ-WQI" id="vqR-gY-viP"/>
                         <outlet property="tableView" destination="Woh-Qk-50r" id="Bhd-4E-xqA"/>
                     </connections>
                 </viewController>
@@ -1103,16 +1116,16 @@ Cg
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fM-a6-9ye">
-                                                <rect key="frame" x="0.0" y="8" width="76" height="62"/>
+                                                <rect key="frame" x="0.0" y="8" width="76" height="62.5"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDr-ql-kg5">
-                                                <rect key="frame" x="0.0" y="70" width="76" height="63"/>
+                                                <rect key="frame" x="0.0" y="70.5" width="76" height="62.5"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBh-tU-ZKm">
-                                                <rect key="frame" x="0.0" y="133" width="76" height="63"/>
+                                                <rect key="frame" x="0.0" y="133" width="76" height="62.5"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtM-84-j6M">
-                                                <rect key="frame" x="0.0" y="196" width="76" height="62"/>
+                                                <rect key="frame" x="0.0" y="195.5" width="76" height="62.5"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

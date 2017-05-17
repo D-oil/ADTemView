@@ -21,9 +21,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let orientationTarget = NSNumber.init(value: deviceOrientation.rawValue)
         UIDevice.current .setValue(orientationTarget, forKey: "orientation")
     }
+
+    func firstLoadingApplicationOption(){
+        
+        if ADTemView.temperatureMode == nil {
+            ADTemView.temperatureMode = Enum.TemperatureMode.centigrade.rawValue
+        }
+        
+        if ADTemView.alarmSwitch == nil {
+            ADTemView.alarmSwitch = true
+        }
+        
+        if ADTemView.highTemperatureSwitch == nil {
+            ADTemView.highTemperatureSwitch = true
+        }
+        
+        if ADTemView.highTemperatureValue == nil {
+            ADTemView.highTemperatureValue = 38.5
+        }
+        
+        if ADTemView.lowTemperatureSwitch == nil {
+            ADTemView.lowTemperatureSwitch = true
+        }
+        
+        if ADTemView.lowTemperatureValue == nil {
+            ADTemView.lowTemperatureValue = 35.5
+        }
+        
+        if ADTemView.alarmModeSwitch == nil {
+            ADTemView.alarmModeSwitch = true
+        }
+        
+        if ADTemView.alarmMode == nil {
+            ADTemView.alarmMode = Enum.AlarmModel.vibration.rawValue
+        }
+
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        firstLoadingApplicationOption()
+        
         return true
     }
 

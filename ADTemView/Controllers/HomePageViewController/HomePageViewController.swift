@@ -132,6 +132,10 @@ class HomePageViewController: ADBaseViewController,ChartViewDelegate{
         initTestData()
         initChart()
         
+ 
+        print(" \(String(describing: ADTemView.temperatureMode))")
+        ADTemView.temperatureMode = Enum.TemperatureMode.centigrade.rawValue
+        print(" \(String(describing: ADTemView.temperatureMode))")
         // Do any additional setup after loading the view.
     }
 
@@ -207,6 +211,13 @@ class HomePageViewController: ADBaseViewController,ChartViewDelegate{
         showBLETableViewController(isShow: true)
     }
     
+    @IBAction func BLEDismissButtonAction(_ sender: UIButton) {
+        showBLETableViewController(isShow: false)
+        if bleTableViewController?.messageBackgroundView.isHidden == false {
+            bleTableViewController?.messageViewDismiss(true)
+        }
+    }
+
     @IBAction func tableButtonAction() {
         AppDelegate.deviceRotationTo(deviceOrientation: .landscapeRight)
     }

@@ -22,9 +22,10 @@
 		76D5ED751EC9A02E0077D20C /* ADTemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED741EC9A02E0077D20C /* ADTemView.swift */; };
 		76D5ED771EC9A8930077D20C /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED761EC9A8930077D20C /* Enum.swift */; };
 		76D5ED791EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED781EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift */; };
-		76D5ED7B1EC9BDF70077D20C /* CALayer+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED7A1EC9BDF70077D20C /* CALayer+Additions.swift */; };
 		76D5ED7F1EC9C7F20077D20C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED7E1EC9C7F20077D20C /* HomePageViewController.swift */; };
 		803D94382BA79E94B5F6A7A8 /* Pods_ADTemView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982569E366BBDD5048679D07 /* Pods_ADTemView.framework */; };
+		92C0182A1ECBF06100BC546D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C018291ECBF06100BC546D /* Extension.swift */; };
+		92C0182C1ECBF52000BC546D /* DefaultsIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0182B1ECBF52000BC546D /* DefaultsIdentifier.swift */; };
 		92CFEA691ECA88D3004673DB /* SettingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA681ECA88D3004673DB /* SettingPageViewController.swift */; };
 		92CFEA6B1ECA88E3004673DB /* TablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA6A1ECA88E3004673DB /* TablePageViewController.swift */; };
 		92CFEA6E1ECA8A1C004673DB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA6D1ECA8A1C004673DB /* NavigationController.swift */; };
@@ -73,11 +74,12 @@
 		76D5ED741EC9A02E0077D20C /* ADTemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADTemView.swift; sourceTree = "<group>"; };
 		76D5ED761EC9A8930077D20C /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		76D5ED781EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageSelectBLETableViewController.swift; sourceTree = "<group>"; };
-		76D5ED7A1EC9BDF70077D20C /* CALayer+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Additions.swift"; sourceTree = "<group>"; };
 		76D5ED7E1EC9C7F20077D20C /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		7CBE94BC31B88B0E73DFD636 /* Pods-ADTemViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADTemViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADTemViewUITests/Pods-ADTemViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8041DD52C9708B3D7EACDF0A /* Pods-ADTemViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADTemViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADTemViewTests/Pods-ADTemViewTests.release.xcconfig"; sourceTree = "<group>"; };
 		9060848F9D75705887C1AA65 /* Pods-ADTemView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADTemView.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADTemView/Pods-ADTemView.release.xcconfig"; sourceTree = "<group>"; };
+		92C018291ECBF06100BC546D /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		92C0182B1ECBF52000BC546D /* DefaultsIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsIdentifier.swift; sourceTree = "<group>"; };
 		92CFEA681ECA88D3004673DB /* SettingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPageViewController.swift; sourceTree = "<group>"; };
 		92CFEA6A1ECA88E3004673DB /* TablePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TablePageViewController.swift; sourceTree = "<group>"; };
 		92CFEA6D1ECA8A1C004673DB /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -199,7 +201,8 @@
 			children = (
 				76D5ED741EC9A02E0077D20C /* ADTemView.swift */,
 				76D5ED761EC9A8930077D20C /* Enum.swift */,
-				76D5ED7A1EC9BDF70077D20C /* CALayer+Additions.swift */,
+				92C018291ECBF06100BC546D /* Extension.swift */,
+				92C0182B1ECBF52000BC546D /* DefaultsIdentifier.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -598,13 +601,14 @@
 				92CFEA691ECA88D3004673DB /* SettingPageViewController.swift in Sources */,
 				76D5ED791EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift in Sources */,
 				76D5ED3C1EC9945D0077D20C /* ADTemView.xcdatamodeld in Sources */,
+				92C0182A1ECBF06100BC546D /* Extension.swift in Sources */,
 				76D5ED771EC9A8930077D20C /* Enum.swift in Sources */,
 				76D5ED341EC9945B0077D20C /* AppDelegate.swift in Sources */,
 				92CFEA781ECB10F6004673DB /* EditProbeInfoTableViewController.swift in Sources */,
 				92CFEA6E1ECA8A1C004673DB /* NavigationController.swift in Sources */,
 				92CFEA6B1ECA88E3004673DB /* TablePageViewController.swift in Sources */,
-				76D5ED7B1EC9BDF70077D20C /* CALayer+Additions.swift in Sources */,
 				76D5ED7F1EC9C7F20077D20C /* HomePageViewController.swift in Sources */,
+				92C0182C1ECBF52000BC546D /* DefaultsIdentifier.swift in Sources */,
 				76D5ED731EC9A00B0077D20C /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

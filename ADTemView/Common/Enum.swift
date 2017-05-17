@@ -12,13 +12,24 @@ import UIKit
 class Enum: NSObject {
     
     struct STORYBOARDS {
-        static let MAIN_STORYBOARD            =   UIStoryboard(name: "Main", bundle: nil)
+        static let MAIN_STORYBOARD                   =   UIStoryboard(name: "Main", bundle: nil)
+    }
+    
+    enum TemperatureMode      : String {
+        case centigrade = "℃"
+        case fahrenheit = "℉"
+    }
+    
+    enum AlarmModel           : String {
+        case ring            = "ring"
+        case vibration       = "vibration"
+        case ring_vibration  = "ring_vibration"
     }
     
     enum StoryboardIdentifier : String {
         case ADStartPageSelectBLETableViewController = "ADStartPageSelectBLETableViewController"
-        case ADEditProbeInfoTableViewController           = "ADEditProbeInfoTableViewController"
-        case ADBLETableViewController           = "ADBLETableViewController"
+        case ADEditProbeInfoTableViewController      = "ADEditProbeInfoTableViewController"
+        case ADBLETableViewController                = "ADBLETableViewController"
 
     }
     
