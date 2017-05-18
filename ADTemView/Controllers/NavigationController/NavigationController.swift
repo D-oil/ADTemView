@@ -21,6 +21,7 @@ class NavigationController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: Autorotate
     override open var shouldAutorotate: Bool {
         get {
             if let visibleVC = visibleViewController {
@@ -48,14 +49,7 @@ class NavigationController: UINavigationController {
         }
     }
     
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -13,7 +13,13 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    //方便开发，添加一个测试模式，很多东西直接跳过
+    static let appMode = Enum.AppMode.testMode
+    
+    static var sharedDelegate : AppDelegate  {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
     static func deviceRotationTo(deviceOrientation:UIDeviceOrientation) {
         
         let orientationUnknow = NSNumber.init(value: UIDeviceOrientation.unknown.rawValue)

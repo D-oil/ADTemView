@@ -11,7 +11,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-//#improt "MBProgressHUD.h"
 
+#import "MBProgressHUD/MBProgressHUD.h"
+#import "BLEManager.h"
 
 #endif /* ADTemView_Briding_Header_h */

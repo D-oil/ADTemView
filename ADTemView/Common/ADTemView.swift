@@ -11,6 +11,9 @@ import Foundation
 public let ADUserDefault = UserDefaults.standard
 
 struct ADTemView {
+    
+    
+    
     //设置项
     static let kTemperatureMode = "kTemperatureMode"
     
@@ -20,6 +23,8 @@ struct ADTemView {
         }
         set {
             ADUserDefault.set(newValue, forKey: ADTemView.kTemperatureMode)
+            //在这里发通知好吗？
+            NotificationCenter.default.post(name: NSNotification.Name.TemperatureSymbolChange, object: newValue)
         }
     }
     
@@ -70,6 +75,7 @@ struct ADTemView {
     static let kLowTemperatureValue = "kLowTemperatureValue"
     
     static var lowTemperatureValue: Double? {
+        
         get {
             return ADUserDefault.value(forKey: kLowTemperatureValue) as? Double
         }
@@ -100,4 +106,12 @@ struct ADTemView {
         }
     }
     
+    static func centigradeToFahrenheit(centigrade :Double) -> Double {
+        return centigrade * 1.8 + 32
+    }
+    
+    static func fahrenheitToCentigrade(fahrenheit :Double) -> Double {
+        return  (fahrenheit - 32 ) / 1.8
+    }
+
 }

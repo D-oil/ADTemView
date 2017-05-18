@@ -11,8 +11,9 @@ import UIKit
 
 class Enum: NSObject {
     
-    struct STORYBOARDS {
-        static let MAIN_STORYBOARD                   =   UIStoryboard(name: "Main", bundle: nil)
+    enum AppMode        : NSString {
+        case testMode    = "testMode"
+        case releaseMode = "releaseMode"
     }
     
     enum TemperatureMode      : String {
@@ -38,7 +39,7 @@ class Enum: NSObject {
         case ADHomePageBLETableViewCell              = "ADHomePageBLETableViewCell"
     }
     
-    enum StoryboardSegue      : String {
+    enum StoryboardSegueIndentifier      : String {
         case ADPushToHomePageSegue                   = "ADPushToHomePageSegue"
     }
     

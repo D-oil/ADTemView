@@ -21,6 +21,7 @@ class HomePageViewController: ADBaseViewController,ChartViewDelegate{
     @IBOutlet weak var bleTableView: UIView!
     var bleTableViewController : BLETableViewController?
     
+
     
 
     func initTestData()  {
@@ -33,40 +34,34 @@ class HomePageViewController: ADBaseViewController,ChartViewDelegate{
         for i in 0..<count {
             let num = arc4random_uniform(UInt32(range))
             let val = ((Double)(num) * 0.01) + 36
-            values.append(ChartDataEntry.init(x:Double(i), y: Double(val), icon: UIImage.init(named: "icon")))
+            values.append(ChartDataEntry.init(x:Double(i), y: Double(val)))
         }
     
-        var set1 :LineChartDataSet?
+        var set1 :LineChartDataSet?                     //曲线集合
         
-//        if (lineChartView.data?.dataSetCount)! > 0)
-//        {
-//            set1 = lineChartView.data?.dataSets.first as? LineChartDataSet;
-//            set1?.values = values
-//            lineChartView.data?.notifyDataChanged()
-//            lineChartView.notifyDataSetChanged()
-//
-//        } else {
-            set1 = LineChartDataSet.init(values: values, label: nil)
-            set1?.drawIconsEnabled = false
-            set1?.mode = .cubicBezier
-            set1?.highlightLineDashLengths = [5.0, 2.5]
-            set1?.setColors(UIColor.init(colorLiteralRed: 134.0/255.0, green: 0.0, blue: 72.0/255.0, alpha: 1.0))
-            set1?.drawFilledEnabled = false
-            set1?.setCircleColor(UIColor.black)
-            set1?.lineWidth = 2.0
-            set1?.circleRadius = 0.0
-            set1?.drawCircleHoleEnabled = true
-            set1?.valueFont = UIFont.systemFont(ofSize: 9.0)
-            set1?.formLineDashLengths = [5.0, 5.0]
-            set1?.formLineWidth = 1.0
-            set1?.formSize = 15.0
-        
+        if ((lineChartView.data?.dataSets) != nil)  {
+            //由于这里只有一条线，所以用.first 就可以了
+            set1 = lineChartView.data?.dataSets.first as? LineChartDataSet;
+            set1?.values = values
+            lineChartView.data?.notifyDataChanged()
+            lineChartView.notifyDataSetChanged()
+
+        } else {
+            
+            set1 = LineChartDataSet.init(values: values, label: nil)    //初始化一条温度曲线
+            set1?.mode = .linear                                        //曲线的模式 cubicBezier平滑模式
+            set1?.setColors(Constant.COLORS.kHomePageTableLineColor)    //线颜色
+            set1?.lineWidth = 2.0                                       //线宽
+            set1?.drawCirclesEnabled = false                            //取消在值上画圈
+            set1?.drawValuesEnabled  = false                            //取消在线上的值显示
+            set1?.drawHorizontalHighlightIndicatorEnabled = false       //点上的水平指示器
+            set1?.drawVerticalHighlightIndicatorEnabled = false         //点上的竖直指示器
+    
             //背景渐变
             let gradientColors = [ChartColorTemplates.colorFromString("#00ff0000").cgColor,
                                   ChartColorTemplates.colorFromString("#ffff0000").cgColor]
         
             let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: nil)
-            
             set1?.fillAlpha = 1.0
             set1?.fill = Fill.fillWithLinearGradient(gradient!, angle: 90)
             set1?.drawFilledEnabled = true;
@@ -74,69 +69,67 @@ class HomePageViewController: ADBaseViewController,ChartViewDelegate{
             var dataSets = Array<Any>.init()
             dataSets.append(set1!);
             
-            let data = LineChartData.init(dataSets: dataSets as! [IChartDataSet])
+            let data = LineChartData.init(dataSets: dataSets as? [IChartDataSet])
             lineChartView.data = data;
 
-//        }
+        }
         
         
     }
     
 
     
-    
+    // MARK: Chart 样式设计
     
     func initChart() {
         //代理
         lineChartView.delegate = self
-        
-        lineChartView.legend.enabled = false //取消图例
-        lineChartView.scaleYEnabled  = false //取消Y轴缩放
-        lineChartView.doubleTapToZoomEnabled = false//取消双击缩放
+        lineChartView.legend.enabled = false            //取消图例
+        lineChartView.scaleYEnabled  = false            //取消Y轴缩放
+//        lineChartView.scaleXEnabled  = false
+        lineChartView.doubleTapToZoomEnabled = false    //取消双击缩放
         lineChartView.chartDescription!.enabled = false //取消描述
         lineChartView.noDataText = "暂无数据"
-        lineChartView.maxVisibleCount = 24//设置能够显示的数据数量
-        lineChartView.rightAxis.enabled = false//取消右边Y轴
+//        lineChartView.maxVisibleCount = 24              //设置能够显示的数据数量
+        lineChartView.rightAxis.enabled = false         //取消右边Y轴
+        lineChartView.dragDecelerationEnabled = true    //拖拽后是否有惯性效果
+        lineChartView.dragDecelerationFrictionCoef = 0.8//惯性系数，越小惯性越大
+        
         
         //左边Y轴
-        let leftAxis = lineChartView.leftAxis
-        leftAxis.removeAllLimitLines()
-        leftAxis.axisMaximum = 43.0
-        leftAxis.axisMinimum = 32.0
-        leftAxis.gridLineDashLengths = [5.0, 5.0]
-        leftAxis.drawZeroLineEnabled = false
-        leftAxis.drawLimitLinesBehindDataEnabled = true
-        leftAxis.drawGridLinesEnabled = false
-        leftAxis.labelTextColor = UIColor.init(colorLiteralRed: 219.0/255.0, green: 33.0/255.0, blue: 15.0/255.0, alpha: 1.0)
-        leftAxis.labelFont = UIFont.init(name: "HelveticaNeue", size: 11.0)!
-        leftAxis.labelCount = 8
-        
-
+        let leftYAxis = lineChartView.leftAxis
+        leftYAxis.labelCount = 11                                                //Y轴上label数量
+        leftYAxis.forceLabelsEnabled = true                                      //强制绘制指定数量的label
+        leftYAxis.axisMaximum = 43.0                                             //Y轴最大值
+        leftYAxis.axisMinimum = 32.0                                             //Y轴最小值
+        leftYAxis.axisLineColor = Constant.COLORS.kHomePageTableAxisLineColor    //Y轴颜色
+        leftYAxis.axisLineWidth = 1.0                                            //Y轴线宽
+        leftYAxis.labelTextColor = Constant.COLORS.kHomePageTableYAxisTextColor  //Y轴文字颜色
+        leftYAxis.labelFont = Constant.FONTS.HomePageTableYAxisTextFont          //Y轴文字字体
+        leftYAxis.drawGridLinesEnabled = false                                   //Y轴刻度线隐藏
         
         //X轴
-        let xAxis = lineChartView.xAxis
-        xAxis.granularityEnabled = true//设置重复的值不显示
-        xAxis.labelPosition = .bottom//设置x轴数据在底部
-        xAxis.gridColor = UIColor.clear
-        xAxis.labelTextColor = UIColor.white//文字颜色
-        xAxis.axisLineColor = UIColor.black
-        xAxis.labelCount = 4
-        xAxis.labelRotationAngle = 50.0
+        let bottomXAxis = lineChartView.xAxis
+        bottomXAxis.labelCount = 5
+        bottomXAxis.forceLabelsEnabled = true                                    //强制绘制指定数量的label
+        bottomXAxis.labelPosition = .bottom                                        //设置x轴数据在底部
+        bottomXAxis.drawGridLinesEnabled = false                                   //X轴刻度线隐藏
+        bottomXAxis.labelTextColor = UIColor.white                                 //文字颜色
+        bottomXAxis.labelFont = Constant.FONTS.HomePageTableXAxisTextFont
+        bottomXAxis.axisLineColor = Constant.COLORS.kHomePageTableAxisLineColor    //Y轴颜色
+        bottomXAxis.axisLineWidth = 1.0                                            //Y轴线宽
+        bottomXAxis.labelRotationAngle = 50.0                                      //文字旋转角度
+        bottomXAxis.granularityEnabled = true                                      //开启刻度尺
+        bottomXAxis.granularity = 6.0                                              //刻度单位
 
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Do any additional setup after loading the view.
         initTestData()
         initChart()
-        
- 
-        print(" \(String(describing: ADTemView.temperatureMode))")
-        ADTemView.temperatureMode = Enum.TemperatureMode.centigrade.rawValue
-        print(" \(String(describing: ADTemView.temperatureMode))")
-        // Do any additional setup after loading the view.
+
     }
 
     
@@ -169,7 +162,7 @@ class HomePageViewController: ADBaseViewController,ChartViewDelegate{
     @IBAction func probeNameButtonAction(_ sender: UIButton) {
         
         if editProbeInfoTableViewContoller == nil {
-            editProbeInfoTableViewContoller = Enum.STORYBOARDS.MAIN_STORYBOARD.instantiateViewController(withIdentifier: Enum.StoryboardIdentifier.ADEditProbeInfoTableViewController.rawValue) as? EditProbeInfoTableViewController
+            editProbeInfoTableViewContoller = Constant.STORYBOARDS.MAIN_STORYBOARD.instantiateViewController(withIdentifier: Enum.StoryboardIdentifier.ADEditProbeInfoTableViewController.rawValue) as? EditProbeInfoTableViewController
             
             self.addChildViewController(editProbeInfoTableViewContoller!)
             editProbeInfoView.addSubview(editProbeInfoTableViewContoller!.view)
@@ -201,7 +194,7 @@ class HomePageViewController: ADBaseViewController,ChartViewDelegate{
     @IBAction func BLEButtonAction(_ sender: UIButton) {
         
         if bleTableViewController == nil {
-            bleTableViewController = Enum.STORYBOARDS.MAIN_STORYBOARD.instantiateViewController(withIdentifier: Enum.StoryboardIdentifier.ADBLETableViewController.rawValue) as? BLETableViewController
+            bleTableViewController = Constant.STORYBOARDS.MAIN_STORYBOARD.instantiateViewController(withIdentifier: Enum.StoryboardIdentifier.ADBLETableViewController.rawValue) as? BLETableViewController
             
             self.addChildViewController(bleTableViewController!)
             bleTableView.addSubview(bleTableViewController!.view)
@@ -222,14 +215,6 @@ class HomePageViewController: ADBaseViewController,ChartViewDelegate{
         AppDelegate.deviceRotationTo(deviceOrientation: .landscapeRight)
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

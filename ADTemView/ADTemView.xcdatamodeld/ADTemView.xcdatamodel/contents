@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ADProbe" representedClassName="ADProbe" syncable="YES" codeGenerationType="class">
         <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ADProbeList" inverseName="probes" inverseEntity="ADProbeList" syncable="YES"/>
+    </entity>
+    <entity name="ADProbeList" representedClassName="ADProbeList" syncable="YES" codeGenerationType="class">
+        <relationship name="probes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ADProbe" inverseName="list" inverseEntity="ADProbe" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ADProbe" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="ADProbe" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="ADProbeList" positionX="-63" positionY="0" width="128" height="60"/>
     </elements>
 </model>

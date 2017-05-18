@@ -25,12 +25,14 @@
 		76D5ED7F1EC9C7F20077D20C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED7E1EC9C7F20077D20C /* HomePageViewController.swift */; };
 		803D94382BA79E94B5F6A7A8 /* Pods_ADTemView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982569E366BBDD5048679D07 /* Pods_ADTemView.framework */; };
 		92C0182A1ECBF06100BC546D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C018291ECBF06100BC546D /* Extension.swift */; };
-		92C0182C1ECBF52000BC546D /* DefaultsIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0182B1ECBF52000BC546D /* DefaultsIdentifier.swift */; };
+		92C018371ECC64E800BC546D /* SettingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C018361ECC64E800BC546D /* SettingPageViewModel.swift */; };
 		92CFEA691ECA88D3004673DB /* SettingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA681ECA88D3004673DB /* SettingPageViewController.swift */; };
 		92CFEA6B1ECA88E3004673DB /* TablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA6A1ECA88E3004673DB /* TablePageViewController.swift */; };
 		92CFEA6E1ECA8A1C004673DB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA6D1ECA8A1C004673DB /* NavigationController.swift */; };
 		92CFEA781ECB10F6004673DB /* EditProbeInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA771ECB10F6004673DB /* EditProbeInfoTableViewController.swift */; };
 		92CFEA7A1ECB197C004673DB /* BLETableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA791ECB197C004673DB /* BLETableViewController.swift */; };
+		92F20E4E1ECD48AC00207CD2 /* BLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F20E4D1ECD48AC00207CD2 /* BLEManager.m */; };
+		92F20E541ECD838E00207CD2 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F20E531ECD838E00207CD2 /* HomePageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,13 +81,18 @@
 		8041DD52C9708B3D7EACDF0A /* Pods-ADTemViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADTemViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADTemViewTests/Pods-ADTemViewTests.release.xcconfig"; sourceTree = "<group>"; };
 		9060848F9D75705887C1AA65 /* Pods-ADTemView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADTemView.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADTemView/Pods-ADTemView.release.xcconfig"; sourceTree = "<group>"; };
 		92C018291ECBF06100BC546D /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		92C0182B1ECBF52000BC546D /* DefaultsIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsIdentifier.swift; sourceTree = "<group>"; };
+		92C018361ECC64E800BC546D /* SettingPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPageViewModel.swift; sourceTree = "<group>"; };
 		92CFEA681ECA88D3004673DB /* SettingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPageViewController.swift; sourceTree = "<group>"; };
 		92CFEA6A1ECA88E3004673DB /* TablePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TablePageViewController.swift; sourceTree = "<group>"; };
 		92CFEA6D1ECA8A1C004673DB /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		92CFEA6F1ECA93F5004673DB /* ADTemView-Briding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ADTemView-Briding-Header.h"; sourceTree = "<group>"; };
 		92CFEA771ECB10F6004673DB /* EditProbeInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProbeInfoTableViewController.swift; sourceTree = "<group>"; };
 		92CFEA791ECB197C004673DB /* BLETableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLETableViewController.swift; sourceTree = "<group>"; };
+		92F20E4C1ECD48AC00207CD2 /* BLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEManager.h; sourceTree = "<group>"; };
+		92F20E4D1ECD48AC00207CD2 /* BLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEManager.m; sourceTree = "<group>"; };
+		92F20E4F1ECD6E2400207CD2 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework"; sourceTree = "<group>"; };
+		92F20E511ECD6E2700207CD2 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../Library/Developer/Xcode/DerivedData/ADTemView-hbtdkrwghhjwyvckbhekupzglmua/Build/Products/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
+		92F20E531ECD838E00207CD2 /* HomePageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		982569E366BBDD5048679D07 /* Pods_ADTemView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADTemView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B152BE1094E9F53D916A25AE /* Pods_ADTemViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADTemViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +128,8 @@
 		6CEF5A529BCA4347052C8345 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92F20E511ECD6E2700207CD2 /* Charts.framework */,
+				92F20E4F1ECD6E2400207CD2 /* MBProgressHUD.framework */,
 				982569E366BBDD5048679D07 /* Pods_ADTemView.framework */,
 				B152BE1094E9F53D916A25AE /* Pods_ADTemViewTests.framework */,
 				347E61E60F92A6A4590AFC31 /* Pods_ADTemViewUITests.framework */,
@@ -154,13 +163,13 @@
 			isa = PBXGroup;
 			children = (
 				76D5ED331EC9945B0077D20C /* AppDelegate.swift */,
-				76D5ED641EC995970077D20C /* BlueTooth */,
+				92F20E4A1ECD488F00207CD2 /* libs */,
 				76D5ED651EC995970077D20C /* Common */,
 				76D5ED661EC995970077D20C /* Constant */,
 				76D5ED671EC995970077D20C /* Controllers */,
-				76D5ED691EC995970077D20C /* View */,
-				76D5ED6A1EC995970077D20C /* ViewModel */,
-				76D5ED681EC995970077D20C /* Model */,
+				92C018311ECC5FC100BC546D /* Model */,
+				92C018321ECC5FC100BC546D /* ViewModels */,
+				92C018331ECC5FC100BC546D /* Views */,
 				76D5ED371EC9945C0077D20C /* Main.storyboard */,
 				76D5ED3F1EC9945D0077D20C /* LaunchScreen.storyboard */,
 				92CFEA6F1ECA93F5004673DB /* ADTemView-Briding-Header.h */,
@@ -189,20 +198,12 @@
 			path = ADTemViewUITests;
 			sourceTree = "<group>";
 		};
-		76D5ED641EC995970077D20C /* BlueTooth */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BlueTooth;
-			sourceTree = "<group>";
-		};
 		76D5ED651EC995970077D20C /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				76D5ED741EC9A02E0077D20C /* ADTemView.swift */,
 				76D5ED761EC9A8930077D20C /* Enum.swift */,
 				92C018291ECBF06100BC546D /* Extension.swift */,
-				92C0182B1ECBF52000BC546D /* DefaultsIdentifier.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -228,27 +229,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		76D5ED681EC995970077D20C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		76D5ED691EC995970077D20C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		76D5ED6A1EC995970077D20C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		76D5ED6F1EC99CEF0077D20C /* StartPageViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +246,29 @@
 				92CFEA791ECB197C004673DB /* BLETableViewController.swift */,
 			);
 			path = HomePageViewController;
+			sourceTree = "<group>";
+		};
+		92C018311ECC5FC100BC546D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92C018321ECC5FC100BC546D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				92F20E531ECD838E00207CD2 /* HomePageViewModel.swift */,
+				92C018361ECC64E800BC546D /* SettingPageViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		92C018331ECC5FC100BC546D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		92CFEA661ECA88B2004673DB /* SettingPageViewController */ = {
@@ -290,6 +293,23 @@
 				92CFEA6D1ECA8A1C004673DB /* NavigationController.swift */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		92F20E4A1ECD488F00207CD2 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				92F20E4B1ECD48A600207CD2 /* BlueTooth */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		92F20E4B1ECD48A600207CD2 /* BlueTooth */ = {
+			isa = PBXGroup;
+			children = (
+				92F20E4C1ECD48AC00207CD2 /* BLEManager.h */,
+				92F20E4D1ECD48AC00207CD2 /* BLEManager.m */,
+			);
+			path = BlueTooth;
 			sourceTree = "<group>";
 		};
 		ED08992B9FB1BF844F391627 /* Pods */ = {
@@ -596,6 +616,7 @@
 			files = (
 				76D5ED751EC9A02E0077D20C /* ADTemView.swift in Sources */,
 				76D5ED711EC99D2A0077D20C /* StartPageViewController.swift in Sources */,
+				92F20E541ECD838E00207CD2 /* HomePageViewModel.swift in Sources */,
 				76D5ED6E1EC99C100077D20C /* ADBaseViewController.swift in Sources */,
 				92CFEA7A1ECB197C004673DB /* BLETableViewController.swift in Sources */,
 				92CFEA691ECA88D3004673DB /* SettingPageViewController.swift in Sources */,
@@ -604,11 +625,12 @@
 				92C0182A1ECBF06100BC546D /* Extension.swift in Sources */,
 				76D5ED771EC9A8930077D20C /* Enum.swift in Sources */,
 				76D5ED341EC9945B0077D20C /* AppDelegate.swift in Sources */,
+				92C018371ECC64E800BC546D /* SettingPageViewModel.swift in Sources */,
+				92F20E4E1ECD48AC00207CD2 /* BLEManager.m in Sources */,
 				92CFEA781ECB10F6004673DB /* EditProbeInfoTableViewController.swift in Sources */,
 				92CFEA6E1ECA8A1C004673DB /* NavigationController.swift in Sources */,
 				92CFEA6B1ECA88E3004673DB /* TablePageViewController.swift in Sources */,
 				76D5ED7F1EC9C7F20077D20C /* HomePageViewController.swift in Sources */,
-				92C0182C1ECBF52000BC546D /* DefaultsIdentifier.swift in Sources */,
 				76D5ED731EC9A00B0077D20C /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,13 +785,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4D49NLC4WA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
+				);
 				INFOPLIST_FILE = ADTemView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skylight.dad.ADTemView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ADTemView/ADTemView-Briding-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ADTemView/ADTemView-Briding-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -779,13 +806,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4D49NLC4WA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
+				);
 				INFOPLIST_FILE = ADTemView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skylight.dad.ADTemView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ADTemView/ADTemView-Briding-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ADTemView/ADTemView-Briding-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

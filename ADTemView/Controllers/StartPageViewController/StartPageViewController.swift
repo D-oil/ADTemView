@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class StartPageViewController: ADBaseViewController {
 
     @IBOutlet weak var selectBLETableViewConnectView: UIView!
@@ -16,8 +17,8 @@ class StartPageViewController: ADBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        BLEManager.shared()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,8 +28,13 @@ class StartPageViewController: ADBaseViewController {
     
     @IBAction func StartButtonAction(_ sender: UIButton) {
 
+        if BLEManager.shared().state != .poweredOn {
+            MBProgressHUD.showMessageToView(view: (self.navigationController?.view)!, message: "请先打开蓝牙开关", delay: 3)
+            return
+        }
+        
         if startPageSelectBLETableViewController == nil {
-            startPageSelectBLETableViewController = Enum.STORYBOARDS.MAIN_STORYBOARD.instantiateViewController(withIdentifier: Enum.StoryboardIdentifier.ADStartPageSelectBLETableViewController.rawValue) as? StartPageSelectBLETableViewController
+            startPageSelectBLETableViewController = Constant.STORYBOARDS.MAIN_STORYBOARD.instantiateViewController(withIdentifier: Enum.StoryboardIdentifier.ADStartPageSelectBLETableViewController.rawValue) as? StartPageSelectBLETableViewController
             
             self.addChildViewController(startPageSelectBLETableViewController!)
             selectBLETableView.addSubview(startPageSelectBLETableViewController!.view)
@@ -36,7 +42,15 @@ class StartPageViewController: ADBaseViewController {
             startPageSelectBLETableViewController!.didMove(toParentViewController: self)
         }
         
-        showSelectBLETableViewController(isShow: true)
+        MBProgressHUD.showAdded(to: self.navigationController?.view, animated: true)
+        BLEManager.shared().startScanOnce(withDelay: 2) { (success : Bool,CBPeripherals : NSMutableArray?) in
+            MBProgressHUD.hide(for: self.navigationController?.view, animated: true)
+            if success {
+                self.showSelectBLETableViewController(isShow: true)
+            } else {
+                
+            }
+        }
         
     }
 

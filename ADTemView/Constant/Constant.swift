@@ -11,6 +11,10 @@ import UIKit
 
 class Constant: NSObject {
     
+    struct STORYBOARDS {
+        static let MAIN_STORYBOARD          =   UIStoryboard(name: "Main", bundle: nil)
+    }
+    
     struct SCREEN_DIMENSION {
         static let BOUNDS                   = UIScreen.main.bounds
         static let WIDTH                    = UIScreen.main.bounds.size.width
@@ -39,22 +43,19 @@ class Constant: NSObject {
     struct FONTS {
         
 //        static let  avenirLightFont =  (Device.screen == .inches_3_5 || Device.screen == .inches_4_0) ? UIFont(name: "Avenir-Light", size: 14) : UIFont(name: "Avenir-Light", size: 18)
-//        static let  avenirHeavyFont =  (Device.screen == .inches_3_5 || Device.screen == .inches_4_0) ? UIFont(name: "Avenir-Heavy", size: 14) : UIFont(name: "Avenir-Heavy", size: 18)
-        static let  fontSettingContent =  UIFont(name: "Avenir-Heavy", size: 16)
-        static let  fontSettingSubContent =  UIFont(name: "Avenir-Book", size: 16)
-        static let  fontSettingTitle =  UIFont(name: "Avenir-Light", size: 20)
+        
+        static let  HomePageTableYAxisTextFont = UIFont.init(name: "HelveticaNeue", size: 11.0)!
+        static let  HomePageTableXAxisTextFont = UIFont.init(name: "HelveticaNeue-Bold", size: 11.0)!
+
     }
     
     struct COLORS {
         
-//        static let kAPP_BACKGROUND_COLOR                                    = UIColor(hex6: 0x474A50)
-//        static let kCLEAR_COLOR                                             = UIColor.clear
-//        static let kBLACK_COLOR                                             = UIColor.black
-//        static let kWHITE_COLOR                                             = UIColor.white
-//        static let kBLUE_COLOR                                              = UIColor(hex6: 0x007AFF)
-//        static let kGRAY_ACTION_BUTTON_DISABLED                             = UIColor(hex6: 0x4A4A4A)
-//        static let kYELLOW_COLOR                                              = UIColor(hex6: 0xF6D431)
-//        static let kLIGHT_RED_COLOR                                              = UIColor(hex6: 0xEE635A)
+        static let kHomePageTableAxisLineColor = UIColor.black
+        static let kHomePageTableYAxisTextColor = UIColor.init(colorLiteralRed: 219.0/255.0, green: 33.0/255.0, blue: 15.0/255.0, alpha: 1.0)
+        static let kHomePageTableLineColor = UIColor.init(colorLiteralRed: 134.0/255.0, green: 0.0, blue: 72.0/255.0, alpha: 1.0)
+        static let kSettingSwitchOpenTextColor  = UIColor.init(colorLiteralRed: 132/255.0, green: 255/255.0, blue: 47/255.0, alpha: 1.0)
+        static let kSettingSwitchCloseTextColor = UIColor.init(colorLiteralRed: 39/255.0, green: 46/255.0, blue: 57/255.0, alpha: 1.0)
         
     }
 }
