@@ -14,6 +14,8 @@ struct ADTemView {
     
     
     
+    
+    
     //设置项
     static let kTemperatureMode = "kTemperatureMode"
     

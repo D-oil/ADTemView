@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //方便开发，添加一个测试模式，很多东西直接跳过
     static let appMode = Enum.AppMode.testMode
     
-    static var sharedDelegate : AppDelegate  {
+    static var shared : AppDelegate  {
         return UIApplication.shared.delegate as! AppDelegate
     }
     
@@ -68,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         firstLoadingApplicationOption()
-        
+    
         return true
     }
 

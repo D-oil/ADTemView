@@ -24,6 +24,10 @@
 		76D5ED791EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED781EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift */; };
 		76D5ED7F1EC9C7F20077D20C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5ED7E1EC9C7F20077D20C /* HomePageViewController.swift */; };
 		803D94382BA79E94B5F6A7A8 /* Pods_ADTemView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982569E366BBDD5048679D07 /* Pods_ADTemView.framework */; };
+		9204E7A91ECDE25A005C382D /* ADProbeList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F20E581ECDC4F200207CD2 /* ADProbeList+CoreDataClass.swift */; };
+		9204E7AA1ECDE260005C382D /* ADProbe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F20E561ECDC4F200207CD2 /* ADProbe+CoreDataClass.swift */; };
+		9204E7AB1ECE148C005C382D /* ADProbe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F20E571ECDC4F200207CD2 /* ADProbe+CoreDataProperties.swift */; };
+		9204E7AC1ECE14BA005C382D /* ADProbeList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F20E591ECDC4F200207CD2 /* ADProbeList+CoreDataProperties.swift */; };
 		92C0182A1ECBF06100BC546D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C018291ECBF06100BC546D /* Extension.swift */; };
 		92C018371ECC64E800BC546D /* SettingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C018361ECC64E800BC546D /* SettingPageViewModel.swift */; };
 		92CFEA691ECA88D3004673DB /* SettingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA681ECA88D3004673DB /* SettingPageViewController.swift */; };
@@ -33,6 +37,7 @@
 		92CFEA7A1ECB197C004673DB /* BLETableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFEA791ECB197C004673DB /* BLETableViewController.swift */; };
 		92F20E4E1ECD48AC00207CD2 /* BLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F20E4D1ECD48AC00207CD2 /* BLEManager.m */; };
 		92F20E541ECD838E00207CD2 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F20E531ECD838E00207CD2 /* HomePageViewModel.swift */; };
+		92F20E5F1ECDC6C000207CD2 /* ProbeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F20E5E1ECDC6C000207CD2 /* ProbeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,11 @@
 		92F20E4F1ECD6E2400207CD2 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework"; sourceTree = "<group>"; };
 		92F20E511ECD6E2700207CD2 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../Library/Developer/Xcode/DerivedData/ADTemView-hbtdkrwghhjwyvckbhekupzglmua/Build/Products/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
 		92F20E531ECD838E00207CD2 /* HomePageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		92F20E561ECDC4F200207CD2 /* ADProbe+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ADProbe+CoreDataClass.swift"; sourceTree = "<group>"; };
+		92F20E571ECDC4F200207CD2 /* ADProbe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ADProbe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		92F20E581ECDC4F200207CD2 /* ADProbeList+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ADProbeList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		92F20E591ECDC4F200207CD2 /* ADProbeList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ADProbeList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		92F20E5E1ECDC6C000207CD2 /* ProbeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProbeManager.swift; sourceTree = "<group>"; };
 		982569E366BBDD5048679D07 /* Pods_ADTemView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADTemView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B152BE1094E9F53D916A25AE /* Pods_ADTemViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADTemViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,6 +261,11 @@
 		92C018311ECC5FC100BC546D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				92F20E5E1ECDC6C000207CD2 /* ProbeManager.swift */,
+				92F20E561ECDC4F200207CD2 /* ADProbe+CoreDataClass.swift */,
+				92F20E571ECDC4F200207CD2 /* ADProbe+CoreDataProperties.swift */,
+				92F20E581ECDC4F200207CD2 /* ADProbeList+CoreDataClass.swift */,
+				92F20E591ECDC4F200207CD2 /* ADProbeList+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -614,10 +629,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9204E7AC1ECE14BA005C382D /* ADProbeList+CoreDataProperties.swift in Sources */,
+				9204E7AB1ECE148C005C382D /* ADProbe+CoreDataProperties.swift in Sources */,
+				9204E7AA1ECDE260005C382D /* ADProbe+CoreDataClass.swift in Sources */,
+				9204E7A91ECDE25A005C382D /* ADProbeList+CoreDataClass.swift in Sources */,
 				76D5ED751EC9A02E0077D20C /* ADTemView.swift in Sources */,
 				76D5ED711EC99D2A0077D20C /* StartPageViewController.swift in Sources */,
 				92F20E541ECD838E00207CD2 /* HomePageViewModel.swift in Sources */,
 				76D5ED6E1EC99C100077D20C /* ADBaseViewController.swift in Sources */,
+				92F20E5F1ECDC6C000207CD2 /* ProbeManager.swift in Sources */,
 				92CFEA7A1ECB197C004673DB /* BLETableViewController.swift in Sources */,
 				92CFEA691ECA88D3004673DB /* SettingPageViewController.swift in Sources */,
 				76D5ED791EC9A92C0077D20C /* StartPageSelectBLETableViewController.swift in Sources */,

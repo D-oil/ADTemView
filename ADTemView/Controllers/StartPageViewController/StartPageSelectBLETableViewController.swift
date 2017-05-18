@@ -44,6 +44,7 @@ class StartPageSelectBLETableViewController: UITableViewController {
         switch AppDelegate.appMode {
         case .testMode :
             cell.textLabel?.text = "FMG 01"
+
         case .releaseMode :
             let peripheral = BLEManager.shared().cbPeripherals[indexPath.row] as! CBPeripheral
             cell.textLabel?.text = peripheral.name
@@ -56,6 +57,10 @@ class StartPageSelectBLETableViewController: UITableViewController {
         
         switch AppDelegate.appMode {
         case .testMode :
+            
+            //创建一个假ADProbe对象用来测试
+            
+            ProbeManager.shared.cerateADProbe(identifier: "ABCDEF", name: "FMG 01")
             
             parent!.performSegue(withIdentifier: Enum.StoryboardSegueIndentifier.ADPushToHomePageSegue.rawValue , sender: nil)
             (parent as! StartPageViewController).hideSelectBLETableViewButtonAction()
@@ -71,6 +76,7 @@ class StartPageSelectBLETableViewController: UITableViewController {
                 
                 MBProgressHUD.hide(for: self.navigationController?.view, animated: true)
                 if success {
+                    //连接成功以后要创建数据库ADProbe对象
                     self.parent!.performSegue(withIdentifier: Enum.StoryboardSegueIndentifier.ADPushToHomePageSegue.rawValue , sender: nil)
                 } else {
                     MBProgressHUD.showMessageToView(view: (self.navigationController?.view)!, message: "连接失败,请重试", delay: 3)
