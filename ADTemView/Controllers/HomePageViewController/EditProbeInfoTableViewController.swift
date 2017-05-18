@@ -78,7 +78,9 @@ class EditProbeInfoTableViewController: UITableViewController ,UITextFieldDelega
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        nameFieldCheckButton.isEnabled = true
+        if originalName != textField.text {
+            nameFieldCheckButton.isEnabled = true
+        }
         cleanCheckButton.isEnabled = true
         closeCheckButton.isEnabled = true
     }
