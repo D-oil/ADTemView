@@ -16,10 +16,9 @@ class EditProbeInfoTableViewController: UITableViewController ,UITextFieldDelega
     @IBOutlet weak var cleanCheckButton: UIButton!
     @IBOutlet weak var closeCheckButton: UIButton!
     
-    var originalName : String?
+    var originalName : String = (ProbeManager.shared.currentProbe?.name)!
     
     func updateUIFromCurrentProbe() {
-        originalName = ProbeManager.shared.currentProbe?.name
         self.nameFieldCheckButton.isEnabled = false
         self.nameFieldCheckButton.backgroundColor = UIColor.gray
         nameField.text = ProbeManager.shared.currentProbe?.name
@@ -48,10 +47,17 @@ class EditProbeInfoTableViewController: UITableViewController ,UITextFieldDelega
     func addTextFieldTargetAction() {
         nameField.addTarget(self, action: #selector(textFieldEditingChange(textField:)), for: .editingChanged)
     }
-
+    
+    var text =  (ProbeManager.shared.currentProbe?.name)!
     @objc
     func textFieldEditingChange(textField : UITextField) {
-
+        
+        if (textField.text?.characters.count)! > 6 {
+            textField.text = text
+        } else {
+            text = textField.text!
+        }
+        
         if originalName == textField.text {
             self.nameFieldCheckButton.isEnabled = false
             self.nameFieldCheckButton.backgroundColor = UIColor.gray
@@ -59,8 +65,7 @@ class EditProbeInfoTableViewController: UITableViewController ,UITextFieldDelega
             self.nameFieldCheckButton.isEnabled = true
             self.nameFieldCheckButton.backgroundColor = UIColor.init(red: 0.0, green: 142/255.0, blue: 183/255.0, alpha: 1.0)
         }
-        
-        print("\(String(describing: textField.text))")
+    
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -69,14 +74,7 @@ class EditProbeInfoTableViewController: UITableViewController ,UITextFieldDelega
         closeCheckButton.isEnabled = false
     }
     
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        
-        if (textField.text?.characters.count)! > 8 {
-            return false
-        }
-        return true
-    }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         if originalName != textField.text {
             nameFieldCheckButton.isEnabled = true
@@ -91,7 +89,9 @@ class EditProbeInfoTableViewController: UITableViewController ,UITextFieldDelega
     }
     
     @IBAction func renameCheckButtonClick(_ sender: UIButton) {
-        
+        ProbeManager.shared.currentProbe?.name = nameField.text
+        updateUIFromCurrentProbe()
+        tableView.endEditing(true)
     }
     
     @IBAction func cleanProbeCheckButtonClick(_ sender: UIButton) {

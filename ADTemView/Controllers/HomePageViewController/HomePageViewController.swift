@@ -20,9 +20,7 @@ class HomePageViewController: ADBaseViewController,ChartViewDelegate{
     @IBOutlet weak var bleTableViewBackgroundView: UIView!
     @IBOutlet weak var bleTableView: UIView!
     var bleTableViewController : BLETableViewController?
-    
 
-    
 
     func initTestData()  {
        

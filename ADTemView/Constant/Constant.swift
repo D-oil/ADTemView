@@ -12,14 +12,14 @@ import UIKit
 class Constant: NSObject {
     
     struct ENTITIYNAME {
-        static let ADPROBE = "ADProbe"
+        static let ADPROBE     = "ADProbe"
         static let ADPPOBELIST = "ADProbeList"
     }
     
-//    struct ADPROBEKEY {
-//        static let NAME = "name"
-//        static let IDENTIFIER = "identifier"
-//    }
+    struct ADPROBEKEY {
+        static let NAME = "name"
+        static let IDENTIFIER = "identifier"
+    }
     
     struct STORYBOARDS {
         static let MAIN_STORYBOARD          =   UIStoryboard(name: "Main", bundle: nil)

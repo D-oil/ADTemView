@@ -15,10 +15,19 @@ class StartPageViewController: ADBaseViewController {
     @IBOutlet weak var selectBLETableView: UIView!
     var startPageSelectBLETableViewController : StartPageSelectBLETableViewController?
     
+    @IBOutlet weak var appModeLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //app模式
+        appModeLabel.text = AppDelegate.appMode.rawValue as String
+        
         // Do any additional setup after loading the view.
         BLEManager.shared()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

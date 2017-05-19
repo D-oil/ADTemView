@@ -58,14 +58,19 @@ class StartPageSelectBLETableViewController: UITableViewController {
         switch AppDelegate.appMode {
         case .testMode :
             
-            //创建一个假ADProbe对象用来测试
+            //如果没有id 为 ABCDEF的对象就创建一个假ADProbe对象用来测试，有就取出对象
             
-            ProbeManager.shared.cerateADProbe(identifier: "ABCDEF", name: "FMG 01")
-            
+            if let probe =  ProbeManager.shared.isExistProbe(identifier: "ABCDEF") {
+                ProbeManager.shared.currentProbe = probe as? ADProbe
+            } else {
+               _ = ProbeManager.shared.cerateADProbe(identifier: "ABCDEF", name: "FMG 01")
+            }
+
             parent!.performSegue(withIdentifier: Enum.StoryboardSegueIndentifier.ADPushToHomePageSegue.rawValue , sender: nil)
             (parent as! StartPageViewController).hideSelectBLETableViewButtonAction()
             
         case .releaseMode :
+            
             let didSelectPeripheral = BLEManager.shared().cbPeripherals[indexPath.row] as! CBPeripheral
             
             (parent as! StartPageViewController).hideSelectBLETableViewButtonAction()
@@ -76,7 +81,15 @@ class StartPageSelectBLETableViewController: UITableViewController {
                 
                 MBProgressHUD.hide(for: self.navigationController?.view, animated: true)
                 if success {
-                    //连接成功以后要创建数据库ADProbe对象
+                    //连接成功以后要创建数据库ADProbe对象,或者从数据库取对象
+                    let peripheral = BLEManager.shared().cbPeripherals[indexPath.row] as! CBPeripheral
+                    
+                    if let probe =  ProbeManager.shared.isExistProbe(identifier: peripheral.identifier.uuidString) {
+                        ProbeManager.shared.currentProbe = probe as? ADProbe
+                    } else {
+                        _ = ProbeManager.shared.cerateADProbe(identifier: peripheral.identifier.uuidString, name: peripheral.name!)
+                    }
+                    
                     self.parent!.performSegue(withIdentifier: Enum.StoryboardSegueIndentifier.ADPushToHomePageSegue.rawValue , sender: nil)
                 } else {
                     MBProgressHUD.showMessageToView(view: (self.navigationController?.view)!, message: "连接失败,请重试", delay: 3)
