@@ -90,6 +90,7 @@ class EditProbeInfoTableViewController: UITableViewController ,UITextFieldDelega
     
     @IBAction func renameCheckButtonClick(_ sender: UIButton) {
         ProbeManager.shared.currentProbe?.name = nameField.text
+        (parent as! HomePageViewController).updataNameButton()
         updateUIFromCurrentProbe()
         tableView.endEditing(true)
     }

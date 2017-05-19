@@ -19,6 +19,12 @@ class HomePageViewController: ADBaseViewController,ChartViewDelegate{
 
     @IBOutlet weak var bleTableViewBackgroundView: UIView!
     @IBOutlet weak var bleTableView: UIView!
+    
+    @IBOutlet weak var downLoadInfoButtonView: UIButton!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var nameButton: UIButton!
+    @IBOutlet weak var bleConnectionButton: UIButton!
+    
     var bleTableViewController : BLETableViewController?
 
 
@@ -122,21 +128,60 @@ class HomePageViewController: ADBaseViewController,ChartViewDelegate{
 
     }
     
+    func updataNameButton()  {
+        nameButton.setTitle(ProbeManager.shared.currentProbe?.name, for: .normal)
+    }
+    
+    func updateUIFromDataBase() {
+        updataNameButton()
+        
+    }
+    
+    func loadingDataFromProbe() {
+        
+        let time: TimeInterval = 3.0
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
+            self.downLoadInfoButtonView.isHidden = true
+            
+             ProbeManager.shared.currentProbe = nil
+        }
+       
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        updateUIFromDataBase()
+        loadingDataFromProbe()
+        
         initTestData()
         initChart()
-
+        
+        registerNotification()
+        
     }
-
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Notification Center
+    
+    func registerNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(currntProbeChange(currentProbe:)), name: NSNotification.Name.CurrentProbeChange, object: nil)
+    }
+    
+    func currntProbeChange(currentProbe:ADProbe?) {
+        
+        if currentProbe != nil {
+        
+        } else {
+            
+        }
+    }
+
     func showProbeInfoTableViewController(isShow:Bool) {
         if isShow {
             view.addSubview(editProbeInfoBackgroundView)

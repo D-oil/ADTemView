@@ -12,8 +12,8 @@ import UIKit
 class Enum: NSObject {
     
     enum AppMode        : NSString {
-        case testMode    = "testMode"
-        case releaseMode = "releaseMode"
+        case testMode    = "Test Mode"
+        case releaseMode = "Release Mode"
     }
     
     enum TemperatureMode      : String {

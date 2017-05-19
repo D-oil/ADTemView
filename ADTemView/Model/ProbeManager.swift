@@ -15,17 +15,24 @@ class ProbeManager: NSObject {
     
     let context = AppDelegate.shared.persistentContainer.viewContext
     
-    var currentProbe : ADProbe?
-    
+    var currentProbe : ADProbe? {
+        didSet{
+            NotificationCenter.default.post(name: Notification.Name.CurrentProbeChange , object: oldValue)
+        }
+    }
+ 
+
     private override init() {}
     
     func cerateADProbe(identifier:String,name:String) -> NSManagedObject {
         
-        let probe = NSEntityDescription.insertNewObject(forEntityName: Constant.ENTITIYNAME.ADPROBE, into: context)
-        currentProbe = probe as? ADProbe
-        currentProbe?.name = name
-        currentProbe?.identifier = identifier
-        return probe
+        let probe = NSEntityDescription.insertNewObject(forEntityName: Constant.ENTITIYNAME.ADPROBE, into: context) as? ADProbe
+        probe?.name = name
+        probe?.identifier = identifier
+        
+        currentProbe = probe
+
+        return probe!
     }
    
     func isExistProbe(identifier:String) -> NSManagedObject? {

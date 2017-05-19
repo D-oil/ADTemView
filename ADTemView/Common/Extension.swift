@@ -32,6 +32,7 @@ extension UISlider {
 //通知拓展
 extension Notification.Name{
     static let TemperatureSymbolChange    = Notification.Name(rawValue: "TemperatureSymbolChange")
+    static let CurrentProbeChange    = Notification.Name(rawValue: "CurrentProbeChange")
 }
 
 extension MBProgressHUD {
